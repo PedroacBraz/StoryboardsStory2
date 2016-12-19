@@ -60,7 +60,7 @@
                     <navigationItem key="navigationItem" title="Players" id="cGB-oP-rh0">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="p3f-6V-6kk">
                             <connections>
-                                <segue destination="ebf-fg-kt0" kind="modal" id="Wa2-i1-axh"/>
+                                <segue destination="ebf-fg-kt0" kind="modal" identifier="AddPlayer" id="Wa2-i1-axh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -96,12 +96,12 @@
                     <navigationItem key="navigationItem" title="Add Player" id="vpj-7f-gtY">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Emm-E4-RcC">
                             <connections>
-                                <action selector="cancel:" destination="sdt-Lg-KKl" id="LKN-Xk-bJr"/>
+                                <action selector="cancel:" destination="sdt-Lg-KKl" id="XtH-lU-oLo"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="5vW-Hv-w9K">
                             <connections>
-                                <action selector="done:" destination="sdt-Lg-KKl" id="1gJ-nb-b66"/>
+                                <action selector="done:" destination="sdt-Lg-KKl" id="dqR-ay-hjr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
