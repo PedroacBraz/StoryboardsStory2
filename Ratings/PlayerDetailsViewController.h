@@ -7,15 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PlayerDetailsViewController.h"
+#import "Player.h"
 
 @class PlayerDetailsViewController;
 
-@protocol  PlayerDetailsViewControllerDelegate <NSObject>
-
-- (void)playerDetailsViewControllerDidCancel:(PlayerDetailsViewController *) controller;
-
-- (void)playerDetailsViewControllerDidSave: (PlayerDetailsViewController *) controller;
-
+@protocol PlayerDetailsViewControllerDelegate <NSObject>
+- (void)playerDetailsViewControllerDidCancel:(PlayerDetailsViewController *)controller;
+- (void)playerDetailsViewController:(PlayerDetailsViewController *)controller didAddPlayer:(Player *)player;
 @end
 
 @interface  PlayerDetailsViewController : UITableViewController;
