@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GamePickViewController.h"
 // Player Class Interface
 @interface Player : NSObject
 
