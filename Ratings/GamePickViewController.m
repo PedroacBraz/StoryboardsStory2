@@ -1,28 +1,27 @@
 //
-//  PlayerDetailsViewController.m
+//  GamePickViewController.m
 //  Ratings
 //
-//  Created by Mac Mini Beta on 19/12/16.
+//  Created by Mac Mini Beta on 20/12/16.
 //  Copyright © 2016 Mac Mini Beta. All rights reserved.
 //
 
-#import "PlayerDetailsViewController.h"
-#import "Player.h"
+#import "GamePickViewController.h"
 
-@interface PlayerDetailsViewController ()
+@interface GamePickViewController ()
 
 @end
 
-@implementation PlayerDetailsViewController
+@implementation GamePickViewController
+{
+    NSArray *_games;
+    NSUInteger _selectedIndex;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    _games = @[@"Angry Birds",@"Poker",@"Tic-Tac-Toe",@"Assassin's Creed",@"Metal Gear Solid",@"BioShock",@"Portal"];
+    _selectedIndex = [_games indexOfObject:self.game];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,56 +31,25 @@
 
 #pragma mark - Table view data source
 
-
-
-- (IBAction)cancel:(id)sender{
-
-    [self.delegate playerDetailsViewControllerDidCancel:self];
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
 
-- (IBAction)done:(id)sender{
-    
-    Player *player = [[Player alloc] init];
-    player.name = self.nameTextField.text;
-    player.game = @"Chess";
-    player.rating = 1;
-    
-    [self.delegate playerDetailsViewController: self didAddPlayer:player];
-    
-}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.section == 0) {
-        [self.nameTextField becomeFirstResponder];
-    }
-}
-
-- (id) initWithCoder:(NSCoder *) aDecoder{
-
-    if ((self = [super initWithCoder:aDecoder])){
-    
-        NSLog(@"init PlayerDetailsViewController");
-    }
-    
-    return self;
-    
-}
-
-- (void)dealloc{
-    NSLog(@"dealloc PlayerDetailsViewController");
+    return[_games count];
 }
 
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GameCell"];
+    cell.textLabel.text = _games[indexPath.row];
     
-    // Configure the cell...
+    
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

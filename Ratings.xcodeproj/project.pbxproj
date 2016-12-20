@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4A3E6491E09470A00F90881 /* GamePickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A3E6481E09470A00F90881 /* GamePickViewController.m */; };
 		F4C903D61E043C570022084A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C903D51E043C570022084A /* main.m */; };
 		F4C903D91E043C570022084A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C903D81E043C570022084A /* AppDelegate.m */; };
 		F4C903DF1E043C570022084A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C903DD1E043C570022084A /* Main.storyboard */; };
@@ -62,6 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F4A3E6471E09470A00F90881 /* GamePickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePickViewController.h; sourceTree = "<group>"; };
+		F4A3E6481E09470A00F90881 /* GamePickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePickViewController.m; sourceTree = "<group>"; };
 		F4C903D11E043C570022084A /* Ratings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ratings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C903D51E043C570022084A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F4C903D71E043C570022084A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -236,6 +239,8 @@
 				F4C903E51E043C570022084A /* Info.plist */,
 				F4F1AE601E082B1C00F2BE7B /* PlayerDetailsViewController.h */,
 				F4F1AE611E082B1C00F2BE7B /* PlayerDetailsViewController.m */,
+				F4A3E6471E09470A00F90881 /* GamePickViewController.h */,
+				F4A3E6481E09470A00F90881 /* GamePickViewController.m */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -408,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4A3E6491E09470A00F90881 /* GamePickViewController.m in Sources */,
 				F4C903D91E043C570022084A /* AppDelegate.m in Sources */,
 				F4C903D61E043C570022084A /* main.m in Sources */,
 				F4F1AE621E082B1C00F2BE7B /* PlayerDetailsViewController.m in Sources */,
